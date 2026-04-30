@@ -6,18 +6,17 @@
 ██╔═══╝ ██╔══██║██╔══██╗██╔══██║██║     ██║     ██╔══╝  ██║
 ██║     ██║  ██║██║  ██║██║  ██║███████╗███████╗███████╗███████╗
 ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝╚══════╝
-```
-⚡ Efficient Parallel Merge Sort
-using Python Multiprocessing
+⚡ **Efficient Parallel Merge Sort using Python Multiprocessing**
+
 ![Python](https://img.shields.io/badge/Python-3.8%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
 ![NumPy](https://img.shields.io/badge/NumPy-Scientific-013243?style=for-the-badge&logo=numpy&logoColor=white)
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-11557c?style=for-the-badge)
 ![Course](https://img.shields.io/badge/Course-CSE706-ff6b6b?style=for-the-badge)
-<br/>
+
 > *When computation time dominates coordination overhead, parallelism wins.*
-<br/>
-</div>
+
+---
 ---
 📌 Table of Contents
 Overview
