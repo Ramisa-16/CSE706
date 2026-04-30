@@ -6,6 +6,8 @@
 ██╔═══╝ ██╔══██║██╔══██╗██╔══██║██║     ██║     ██╔══╝  ██║
 ██║     ██║  ██║██║  ██║██║  ██║███████╗███████╗███████╗███████╗
 ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝╚══════╝
+
+    
 ⚡ **Efficient Parallel Merge Sort using Python Multiprocessing**
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)
@@ -33,14 +35,23 @@ Key Insights
 ---
 🔭 Overview
 This project provides a rigorous experimental and theoretical comparison between Sequential Merge Sort and Parallel Merge Sort using Python's `multiprocessing` module.
+
 It goes well beyond a simple timing test — it includes:
+
 📐 Theoretical complexity analysis with visual growth curves
+
 🧠 Memory profiling via `tracemalloc` (KB-level precision)
+
 📊 6-panel professional dashboard covering time, speedup, efficiency, and more
+
 ⚖️ Amdahl's Law applied to predict scaling limits
+
 🔢 Recursion depth & comparison count tables
+
 🥧 Serial vs Parallel work fraction pie charts per input size
+
 ✅ 7 edge case correctness tests validated against Python's built-in `sorted()`
+
 ---
 🏆 Key Results
 Input Size	Sequential (s)	Parallel (s)	Speedup	Efficiency
@@ -140,10 +151,15 @@ pip install numpy matplotlib pandas
 ```
 Library	Purpose	Version
 `multiprocessing`	Parallel worker pool	stdlib
+
 `tracemalloc`	Memory profiling	stdlib
+
 `numpy`	Numerical operations & arrays	≥ 1.21
+
 `matplotlib`	All visualizations & plots	≥ 3.4
+
 `pandas`	Results summary DataFrame	≥ 1.3
+
 ---
 🚀 How to Run
 1. Clone / Download
@@ -190,15 +206,25 @@ This is why simply adding more cores eventually yields diminishing returns.
 ---
 ✅ Edge Cases Tested
 All 7 cases verified to match Python's built-in `sorted()`:
+
 Test Case	Sequential	Parallel	Correct?
+
 Random list	✅	✅	✅
+
 Already sorted	✅	✅	✅
+
 Reverse sorted	✅	✅	✅
+
 All same values	✅	✅	✅
+
 Single element	✅	✅	✅
+
 Empty list	✅	✅	✅
+
 Two elements	✅	✅	✅
+
 The implementation is also a stable sort — equal elements preserve their original relative order because the merge step uses `<=`.
+
 ---
 💡 Key Insights
 ```
