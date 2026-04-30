@@ -66,15 +66,25 @@ It goes well beyond a simple timing test — it includes:
 
 ---
 🏆 Key Results
+
 Input Size	Sequential (s)	Parallel (s)	Speedup	Efficiency
+
 1,000	~0.003	~0.080	~0.04x	overhead
+
 5,000	~0.016	~0.090	~0.18x	overhead
+
 10,000	~0.035	~0.055	~0.64x	improving
+
 20,000	~0.076	~0.065	~1.17x	58%
+
 40,000	~0.165	~0.110	~1.50x	75%
+
 80,000	~0.360	~0.200	~1.80x	90%
+
 > **Parallel outperforms sequential at n > ~20,000 elements on most machines.**
+> 
 > Exact values vary by CPU core count and system load.
+> 
 ---
 ⚙️ Algorithms
 Sequential Merge Sort
