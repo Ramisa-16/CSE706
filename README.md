@@ -20,18 +20,30 @@
 
 ---
 ---
-📌 Table of Contents
+📌 Table of Content
+
 Overview
+
 Key Results
+
 Algorithms
+
 Complexity Analysis
+
 Project Structure
+
 Requirements
+
 How to Run
+
 Visualizations
+
 Amdahl's Law
+
 Edge Cases Tested
+
 Key Insights
+
 ---
 🔭 Overview
 This project provides a rigorous experimental and theoretical comparison between Sequential Merge Sort and Parallel Merge Sort using Python's `multiprocessing` module.
@@ -98,8 +110,10 @@ def parallel_merge_sort(arr, threshold=5000):
     return merge(left_sorted, right_sorted)
 ```
 The `threshold=5000` parameter is a critical design decision — below this size, spawning new processes costs more than it saves.
+
 ---
 📐 Complexity Analysis
+
 Time Complexity
 ```
 ╔══════════════════════╦═══════════════╦═══════════════╦═══════════════╗
@@ -111,6 +125,7 @@ Time Complexity
   p = number of parallel workers
 ```
 Merge Sort is one of the few sorting algorithms with a tight O(n log n) bound — it behaves the same regardless of input ordering.
+
 Space Complexity
 ```
 ╔══════════════════════╦══════════════╦═══════════════════════════════════╗
@@ -121,13 +136,21 @@ Space Complexity
 ╚══════════════════════╩══════════════╩═══════════════════════════════════╝
 ```
 Recursion Depth
+
 Input n	Depth `⌈log₂n⌉`	Total Merges	Comparisons ≈ n log₂n
+
 1,000	10	999	9,966
+
 5,000	13	4,999	61,439
+
 10,000	14	9,999	132,877
+
 20,000	15	19,999	286,044
+
 40,000	16	39,999	614,709
+
 80,000	17	79,999	1,316,418
+
 ---
 📁 Project Structure
 ```
@@ -176,35 +199,54 @@ pip install numpy matplotlib pandas
 jupyter notebook CSE706_enhanced.ipynb
 ```
 4. Run all cells
+5. 
 Go to Kernel → Restart & Run All to execute everything from scratch.
+
 > ⚠️ **Important on Windows / macOS:** Multiprocessing in Jupyter requires cells to be run inside `if __name__ == "__main__":` guards in script mode. The notebook is pre-configured to work correctly as-is.
+> 
 ---
+
 📊 Visualizations
+
 The notebook generates 6 types of charts, all saved as high-DPI PNG files:
+
 Chart	File	What it shows
+
 Complexity Theory	`complexity_theory.png`	O(n log n) vs O(n log n / p) growth
+
 Memory Usage	`memory_usage.png`	Peak KB: sequential vs parallel
+
 Analysis Dashboard	`dashboard.png`	6 panels: time · speedup · efficiency · saved · log-scale · Amdahl
+
 Comparison Count	`comparisons.png`	n log n growth bar chart
+
 Scalability	`scalability.png`	Projected speedup for N cores
+
 Work Fraction	`pie_charts.png`	Serial vs parallel % per input size
+
 ---
 📏 Amdahl's Law
+
 The maximum speedup achievable with p processors is:
+
 ```
          1
 S(p) = ─────────────────
         f + (1 - f) / p
 ```
 Where f is the fraction of code that must run serially (process spawn, final merge).
+
 This project back-calculates f from empirical results and projects:
+
 ```
 Observed max speedup ≈ 1.8x  →  serial fraction f ≈ 12–15%
 Theoretical max (p→∞)        →  S ≈ 6.7x  (hard ceiling)
 ```
 This is why simply adding more cores eventually yields diminishing returns.
+
 ---
 ✅ Edge Cases Tested
+
 All 7 cases verified to match Python's built-in `sorted()`:
 
 Test Case	Sequential	Parallel	Correct?
@@ -251,5 +293,6 @@ The implementation is also a stable sort — equal elements preserve their origi
 ---
 <div align="center">
 CSE706 — Advanced Algorithms | Parallel Computing Project
+    
 Made with Python · multiprocessing · NumPy · Matplotlib · Pandas
 </div>
