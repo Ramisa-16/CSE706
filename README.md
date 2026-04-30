@@ -1,5 +1,5 @@
 <div align="center">
-```
+
 
     
 ⚡ **Efficient Parallel Merge Sort using Python Multiprocessing**
